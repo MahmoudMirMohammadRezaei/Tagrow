@@ -1,0 +1,135 @@
+﻿@model IEnumerable<Tagro.Data.Data.Report>
+
+
+@{
+    ViewBag.Title = "صفحه‌ی اصلی";
+}
+
+
+@*<table class="table">
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Code
+            </th>
+            <th>
+                CreatedDate
+            </th>
+            <th>Actions</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Title
+                </td>
+                <td>
+                    @item.Code
+                </td>
+                <td>
+                    @item.CreatedDate
+                </td>
+                <td>
+                    <a href="/Report/Details/@item.Id">detail</a>
+                </td>
+            </tr>
+        }
+
+    </table>*@
+
+
+
+<!-- ============================================================== -->
+<!-- Start right Content here -->
+<!-- ============================================================== -->
+<div>
+
+    <div class="content">
+        @foreach (var item in Model)
+        {
+
+            <!-- Start content -->
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-10">
+                        <div class="bg-picture card-box">
+                            <div class="profile-info-name">
+
+                                @foreach (var img in item.ImageNews)
+                                {
+                                    <img src="~/Files/banners/@img.Path"
+                                         class="img-thumbnail" alt="News-image" />
+                                }
+
+                                <div class="profile-info-detail">
+                                    <h3 class="m-t-0 m-b-0">@item.Title</h3>
+
+                                    @*<p class="text-muted m-b-20"><i>@item.Category.Name</i></p>*@
+
+                                    <p>@item.CreatedDate</p>
+                                    @*<p>@Html.Raw(item.Body)</p>*@
+                                    <hr />
+                                    <div class="button-list m-t-20">
+                                        <button type="button" class="btn btn-facebook btn-sm waves-effect waves-light">
+                                            <i class="fa fa-facebook"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-sm btn-twitter waves-effect waves-light">
+                                            <i class="fa fa-twitter"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-sm btn-linkedin waves-effect waves-light">
+                                            <i class="fa fa-linkedin"></i>
+                                        </button>
+
+
+                                        <a class="btn btn-danger btn-rounded w-md waves-effect waves-light" href="/Report/Details/@item.Id">  ادامه ی مطلب ... </a>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <!--/ meta -->
+
+
+                    </div>
+
+                    @*<div class="col-sm-4">
+                            <div class="card-box">
+                                <div class="dropdown pull-right">
+                                </div>
+
+                                <h4 class="header-title m-t-0 m-b-30">اعضای تیم من</h4>
+
+                                <ul class="list-group m-b-0 user-list">
+                                    <li class="list-group-item">
+                                        <a href="#" class="user-list-item">
+                                            <div class="avatar">
+                                                <img src="assets/images/users/avatar-2.jpg" alt="">
+                                            </div>
+                                            <div class="user-desc">
+                                                <span class="name">وحید حسنی</span>
+                                                <span class="desc">مدیر عامل</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>*@
+                </div>
+
+
+
+            </div> <!-- container -->
+
+        }
+    </div> <!-- content -->
+</div>
+<!-- End content-page -->

@@ -1,0 +1,12 @@
+C:\Users\Constantine\source\repos\TagroReport\Tagro.Data\bin\Debug\Tagro.Data.dll.config
+C:\Users\Constantine\source\repos\TagroReport\Tagro.Data\bin\Debug\Tagro.Data.dll
+C:\Users\Constantine\source\repos\TagroReport\Tagro.Data\bin\Debug\Tagro.Data.pdb
+C:\Users\Constantine\source\repos\TagroReport\Tagro.Data\bin\Debug\EntityFramework.dll
+C:\Users\Constantine\source\repos\TagroReport\Tagro.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Constantine\source\repos\TagroReport\Tagro.Data\bin\Debug\EntityFramework.xml
+C:\Users\Constantine\source\repos\TagroReport\Tagro.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Constantine\source\repos\TagroReport\Tagro.Data\obj\Debug\Tagro.Data.csprojAssemblyReference.cache
+C:\Users\Constantine\source\repos\TagroReport\Tagro.Data\obj\Debug\Tagro.Data.csproj.CoreCompileInputs.cache
+C:\Users\Constantine\source\repos\TagroReport\Tagro.Data\obj\Debug\Tagro.Data.csproj.CopyComplete
+C:\Users\Constantine\source\repos\TagroReport\Tagro.Data\obj\Debug\Tagro.Data.dll
+C:\Users\Constantine\source\repos\TagroReport\Tagro.Data\obj\Debug\Tagro.Data.pdb

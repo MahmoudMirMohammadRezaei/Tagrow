@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TableSaw Sortable Table</title>
+
+	<link rel="stylesheet" href="../dist/tablesaw.css">
+	<link rel="stylesheet" href="demo.css">
+	<link rel="stylesheet" href="//filamentgroup.github.io/demo-head/demohead.css">
+
+	<!--[if lt IE 9]><script src="../dist/dependencies/respond.js"></script><![endif]-->
+	<script src="../dist/dependencies/jquery.js"></script>
+	<script src="../dist/tablesaw.js"></script>
+	<script src="../dist/tablesaw-init.js"></script>
+	<script src="//filamentgroup.github.io/demo-head/loadfont.js"></script>
+</head>
+<body>
+	<div class="demo-header">
+		<div class="company">
+			<img src="http://filamentgroup.com/images/fg-logo-positive-sm-crop.png">
+		</div>
+		<div class="details">
+			<h1 class="description-container">Demo of <span class="repo-name">جدول Tablesaw</span>
+				<span class="description">A group of plugins for responsive tables.</span>
+			</h1>
+			<ul class="outbound-links">
+				<li><a href="https://github.com/filamentgroup/tablesaw">کد</a></li>
+				<li><a href="https://github.com/filamentgroup/tablesaw/issues">Issues</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="nav-container">
+		<div class="docs-globalnav">
+			<nav class="docs-nav">
+			<a href="kitchensink.html">Kitchen Sink</a>
+			<a href="modeswitch.html">Mode Switch</a>
+			<a href="sort.html" class="current">Sortable</a>
+			<a href="stack.html">Stack</a>
+			<a href="stackonly.html">Stack Only</a>
+			<a href="swipe.html">جدول سوایپ</a>
+			<a href="toggle.html">Toggle</a>
+			<a href="bare.html">Bare</a>
+			</nav>
+		</div>
+	</div>
+	<div class="docs-main">
+		<h2>جدول قابل مرتب سازی</h2>
+		<h3 class="docs">ظاهر پیش فرض (با سوییچ مرتب سازی اختیاری)</h3>
+
+		<table class="tablesaw" data-tablesaw-sortable data-tablesaw-sortable-switch>
+			<thead>
+				<tr>
+					<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist">عنوان فیلم</th>
+					<th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col data-tablesaw-priority="3">رتبه</th>
+					<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2">سال</th>
+					<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1"><abbr title="Rotten Tomato Rating">امتیاز</abbr></th>
+					<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4">جمع کل</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="title"><a href="http://en.wikipedia.org/wiki/Avatar_(2009_film)">Avatar</a></td>
+					<td>1</td>
+					<td>2009</td>
+					<td>83%</td>
+					<td>2.7 بیلیون</td>
+				</tr>
+				<tr>
+					<td class="title"><a href="http://en.wikipedia.org/wiki/Titanic_(1997_film)">Titanic</a></td>
+					<td>2</td>
+					<td>1997</td>
+					<td>88%</td>
+					<td>2.1 بیلیون</td>
+				</tr>
+				<tr>
+					<td class="title"><a href="http://en.wikipedia.org/wiki/The_Avengers_(2012_film)">انتقام جویان</a></td>
+					<td>3</td>
+					<td>2012</td>
+					<td>92%</td>
+					<td>1.5 بیلیون</td>
+				</tr>
+				<tr>
+					<td class="title"><a href="http://en.wikipedia.org/wiki/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_2">هری پاتر و شاهزادگان مرگ - قسمت 2</a></td>
+					<td>4</td>
+					<td>2011</td>
+					<td>96%</td>
+					<td>$1.3B</td>
+				</tr>
+				<tr>
+					<td class="title"><a href="http://en.wikipedia.org/wiki/Frozen_(2013_film)">یخ زده</a></td>
+					<td>5</td>
+					<td>2013</td>
+					<td>89%</td>
+					<td>1.2 بیلیون</td>
+				</tr>
+				<tr>
+					<td class="title"><a href="http://en.wikipedia.org/wiki/Iron_Man_3">مرد آهنی 3</a></td>
+					<td>6</td>
+					<td>2013</td>
+					<td>78%</td>
+					<td>1.2 بیلیون</td>
+				</tr>
+				<tr>
+					<td class="title"><a href="http://en.wikipedia.org/wiki/Transformers:_Dark_of_the_Moon">تبدیل شوندگان: نیمه تاریک ماه</a></td>
+					<td>7</td>
+					<td>2011</td>
+					<td>36%</td>
+					<td>1.1 بیلیون</td>
+				</tr>
+				<tr>
+					<td class="title"><a href="http://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Return_of_the_King">ارباب حلقه ها: بازگشت پادشاه</a></td>
+					<td>8</td>
+					<td>2003</td>
+					<td>95%</td>
+					<td>1.1 بیلیون</td>
+				</tr>
+				<tr>
+					<td class="title"><a href="http://en.wikipedia.org/wiki/Skyfall">اسکال فال</a></td>
+					<td>9</td>
+					<td>2012</td>
+					<td>92%</td>
+					<td>1.1 بیلیون</td>
+				</tr>
+				<tr>
+					<td class="title"><a href="http://en.wikipedia.org/wiki/Transformers:_Age_of_Extinction">تبدیل شوندگان: عصر انقراض</a></td>
+					<td>10</td>
+					<td>2014</td>
+					<td>18%</td>
+					<td>1 بیلیون</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

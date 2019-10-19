@@ -1,0 +1,161 @@
+﻿@model Tagro.Data.Data.Report
+
+@{
+    ViewBag.Title = "Details";
+
+    var username = ViewBag.userName;
+}
+
+@*<h2>Details</h2>
+
+<div>
+    <h4>Report</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Body)
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.Body)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageId)
+        </dd>
+
+    </dl>
+</div>*@
+
+
+<!-- ============================================================== -->
+<!-- Start right Content here -->
+<!-- ============================================================== -->
+<div>
+    <!-- Start content -->
+    <div class="content">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card-box task-detail">
+                        <div class="media m-b-20">
+                            <div class="media-left">
+                                <a href="#"> <img class="media-object img-circle" alt="64x64" src="~/vert/assets/images/users/avatar-11.png" style="width: 48px; height: 48px;"> </a>
+                            </div>
+                            <div class="media-body">
+
+                                <h4 class="media-heading m-b-0">@username</h4>
+                                <span class="label label-danger" style="font-size:larger">@Html.DisplayFor(model => model.Category.Name)</span>
+                            </div>
+                        </div>
+
+                        <h4 class="font-600 m-b-20">@Html.DisplayFor(model => model.Title)</h4>
+
+                        <p class="text-muted">
+                            @Html.Raw(Model.Body)
+                        </p>
+
+                        <ul class="list-inline task-dates m-b-0 m-t-20">
+                            <li>
+                                <h5 class="font-600 m-b-5">تاریخ شروع</h5>
+                                <p> @Html.DisplayFor(model => model.UpdatedDate) @*<small class="text-muted">1:00 بعد از ظهر</small>*@</p>
+                            </li>
+                        </ul>
+
+                        <div class="clearfix"></div>
+
+                        <button type="submit" class="btn btn-success waves-effect waves-light">@Html.ActionLink("بازگشت به لیست", "Index")</button>
+
+                    </div>
+                </div><!-- end col -->
+
+                <div class="col-md-4">
+                    <div class="card-box">
+                        <h4 class="header-title m-t-0 m-b-30"></h4>
+
+                        <div>
+                            @*<div class="media m-b-10">
+                                    <div class="media-left">
+                                        <a href="#"> <img class="media-object img-circle thumb-sm" alt="64x64" src="assets/images/users/avatar-1.jpg"> </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">ای تمز</h4>
+                                        <p class="font-13 text-muted m-b-0">
+                                            <a href="" class="text-primary">-Themes</a>
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                        </p>
+                                        <a href="" class="text-success font-13">پاسخ دادن</a>
+                                    </div>
+                                </div>*@
+                        </div>
+                    </div>
+                </div><!-- end col -->
+            </div>
+            <!-- end row -->
+
+
+        </div> <!-- container -->
+
+    </div> <!-- content -->
+</div>
+
+
+
+<!-- ============================================================== -->
+<!-- End Right content here -->
+<!-- ============================================================== -->

@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagroReport", "TagroReport\TagroReport.csproj", "{EB8FB45B-EAC1-43CF-B2E7-87C65B624C91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagroReport.Tests", "TagroReport.Tests\TagroReport.Tests.csproj", "{3F9C6025-384A-423B-A1E0-1CAEB5E56132}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tagro.Data", "Tagro.Data\Tagro.Data.csproj", "{68270FDC-253D-4EF1-9A5C-B50E14B94583}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tagro.Admin", "Tagro.Admin\Tagro.Admin.csproj", "{A01960FC-9CC3-4D3A-9A42-7C82881F04D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB8FB45B-EAC1-43CF-B2E7-87C65B624C91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB8FB45B-EAC1-43CF-B2E7-87C65B624C91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB8FB45B-EAC1-43CF-B2E7-87C65B624C91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB8FB45B-EAC1-43CF-B2E7-87C65B624C91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F9C6025-384A-423B-A1E0-1CAEB5E56132}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F9C6025-384A-423B-A1E0-1CAEB5E56132}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F9C6025-384A-423B-A1E0-1CAEB5E56132}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F9C6025-384A-423B-A1E0-1CAEB5E56132}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68270FDC-253D-4EF1-9A5C-B50E14B94583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68270FDC-253D-4EF1-9A5C-B50E14B94583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68270FDC-253D-4EF1-9A5C-B50E14B94583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68270FDC-253D-4EF1-9A5C-B50E14B94583}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A01960FC-9CC3-4D3A-9A42-7C82881F04D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A01960FC-9CC3-4D3A-9A42-7C82881F04D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A01960FC-9CC3-4D3A-9A42-7C82881F04D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A01960FC-9CC3-4D3A-9A42-7C82881F04D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A90DD076-F347-4331-805A-CF700CF3084B}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Tagro.Data.Data.AspNetRole>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a href="/Roles/Form">Create New One</a>
+</p>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                <a href="/Roles/Form/@item.Id">Edit</a>
+                <a href="/Roles/delete/@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+
+</table>

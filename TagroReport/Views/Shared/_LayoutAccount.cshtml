@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<html  lang="en" dir="rtl">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+
+
+
+
+
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+         
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" href="~/vert/assets/plugins/morris/morris.css">
+
+    @*addthis*@
+    @RenderSection("stylesincludes", required: false)
+
+    <!-- App css -->
+    <link href="~/vert/assets/css/bootstrap-rtl.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/vert/assets/css/core.css" rel="stylesheet" type="text/css" />
+    <link href="~/vert/assets/css/components.css" rel="stylesheet" type="text/css" />
+    <link href="~/vert/assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="~/vert/assets/css/pages.css" rel="stylesheet" type="text/css" />
+    <link href="~/vert/assets/css/menu.css" rel="stylesheet" type="text/css" />
+    <link href="~/vert/assets/css/responsive.css" rel="stylesheet" type="text/css" />
+
+    <script src="~/vert/assets/js/modernizr.min.js"></script>
+
+    <link href="~/Content/css/site.css" rel="stylesheet" />
+
+    @*addthis*@
+    @RenderSection("styles", required: false)
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+
+
+
+
+    <script>
+        var resizefunc = [];
+    </script>
+
+    <!-- jQuery  -->
+    <script src="~/vert/assets/js/jquery.min.js"></script>
+    <script src="~/vert/assets/js/bootstrap-rtl.min.js"></script>
+    <script src="~/vert/assets/js/detect.js"></script>
+    <script src="~/vert/assets/js/fastclick.js"></script>
+    <script src="~/vert/assets/js/jquery.blockUI.js"></script>
+    <script src="~/vert/assets/js/waves.js"></script>
+    <script src="~/vert/assets/js/jquery.nicescroll.js"></script>
+    <script src="~/vert/assets/js/jquery.slimscroll.js"></script>
+    <script src="~/vert/assets/js/jquery.scrollTo.min.js"></script>
+
+    <!-- KNOB JS -->
+    <!--[if IE]>
+    <script type="text/javascript" src="assets/plugins/jquery-knob/excanvas.js"></script>
+    <![endif]-->
+    <script src="~/vert/assets/plugins/jquery-knob/jquery.knob.js"></script>
+
+    <!--Morris Chart-->
+    <script src="~/vert/assets/plugins/morris/morris.min.js"></script>
+    <script src="~/vert/assets/plugins/raphael/raphael-min.js"></script>
+
+    <!-- Dashboard init -->
+    <script src="~/vert/assets/pages/jquery.dashboard.js"></script>
+
+    <!-- App js -->
+    <script src="~/vert/assets/js/jquery.core.js"></script>
+    <script src="~/vert/assets/js/jquery.app.js"></script>
+
+    <script src="~/Scripts/js/site.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

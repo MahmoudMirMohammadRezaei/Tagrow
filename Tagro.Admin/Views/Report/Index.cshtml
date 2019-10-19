@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Tagro.Data.Data.Report>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<select class="btn btn-secondary btn-lg dropdown-toggle" 
+        style="background:#1e7e34"
+        name="statusType" onchange="ReportStatusTypeChange(this)">
+    <option value="1">Published</option>
+    <option value="2">deleted</option>
+    <option value="3">rejected</option>
+    <option value="4">hold</option>
+</select>
+
+
+<div id="reportList" style="margin-top:20px">
+    @{ 
+        Html.RenderPartial("/Views/Report/List.cshtml", Model);
+    }
+</div>
+
+@section Scripts{
+    <script>
+    function ReportStatusTypeChange(selectElement) {
+        var data = {
+            reportStatus: $(selectElement).val()
+        };
+
+        $.ajax({
+            url: "/Report/List",
+            type: "Post",
+            data: JSON.stringify(data),
+            contentType: "application/json",
+            success: function (data) {
+                $("#reportList").empty();
+                $("#reportList").append(data);
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+    }
+    </script>
+    
+    }

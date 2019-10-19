@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Tagro.Data.Data.Report>
+
+    <table class="table table-striped table-dark">
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Code
+            </th>
+            <th>
+                CreatedDate
+            </th>
+            <th>Actions</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Title
+                </td>
+                <td>
+                    @item.Status
+                </td>
+                <td>
+                    @if (item.Status == 3)
+                    {
+                        <span class="label label-danger">ردشده</span>
+                    }
+                    else if (item.Status == 1)
+                    {
+                        <span class="label label-success">منتشر شده</span>
+                    }
+                    else if (item.Status == 2)
+                    {
+                        <span class="label label-info">حذف شده</span>
+                    }
+                    else if (item.Status == 4)
+                    {
+                        <span class="label label-primary">منتظرتایید</span>
+                    }
+                </td>
+                <td>
+                    <a class="btn btn-warning" href="/Report/Form/@item.Id">Edit</a>
+                    <a class="btn btn-success" href="/Report/UpdateStatus/@item.Id?status=1">Accept</a>
+
+                    <a class="btn btn-info" href="/Report/UpdateStatus/@item.Id?status=2">Delete</a>
+                    <a class="btn btn-danger" href="/Report/UpdateStatusPublish/@item.Id?status=3">reject</a>
+
+                    <a class="btn btn-primary" href="/Report/UpdateStatus/@item.Id?status=4">hold</a>
+                </td>
+            </tr>
+        }
+
+    </table>

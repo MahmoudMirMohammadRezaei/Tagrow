@@ -1,0 +1,125 @@
+﻿@model IEnumerable<Tagro.Data.Data.Report>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@*<p>
+        <a href="/Report/Form">Create New One</a>
+    </p>*@
+@*<table class="table">
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Code
+            </th>
+            <th>
+                CreatedDate
+            </th>
+            <th>Actions</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Title
+                </td>
+                <td>
+                    @item.Code
+                </td>
+                <td>
+                    @item.CreatedDate
+                </td>
+                <td>
+                    <a href="/Report/Form/@item.Id">Edit</a> |
+                    <a href="/Report/Details/@item.Id">detail</a> |
+
+                    <a href="/Report/UpdateStatus/@item.Id?status=2">Delete</a>
+                </td>
+            </tr>
+        }
+
+    </table>*@
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel">
+            <div class="panel-body">
+                <div class="row">
+                    <p class="btn btn-purple btn-bordred waves-effect w-md waves-light m-b-5">
+                        <a href="/Report/Form" style="color:wheat">  ثبت خبر جدید  </a>
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="">
+                            <h2 class="waves-effect waves-light">لیست مقالات شما</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="editable-responsive">
+                    <table class="table table-striped" id="datatable-editable">
+                        <thead>
+                            <tr>
+                                <th>عنوان</th>
+                                <th>تاریخ</th>
+                                <th>وضعیت</th>
+                                <th>اقدامات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr class="gradeX">
+                                    <td>@item.Title</td>
+                                    <td>@item.CreatedDate</td>
+                                    @*<td>@enum( item.Status)</td>*@
+                                    <td>
+                                        @if (item.Status == 3)
+                                        {
+                                            <span class="label label-danger">ردشده</span>
+                                        }
+                                        else if (item.Status == 1)
+                                        {
+                                            <span class="label label-success">منتشر شده</span>
+                                        }
+                                        else if (item.Status == 2)
+                                        {
+                                            <span class="label label-purple">حذف شده</span>
+                                        }
+                                        else if (item.Status == 4)
+                                        {
+                                            <span class="label label-primary">منتظرتایید</span>
+                                        }
+                                    </td>
+                                    <td class="actions">
+                                        @*<a href="#" class=" on-editing save-row"><i class="fa fa-save"></i></a>
+                                            <a href="#" class=" on-editing cancel-row"><i class="fa fa-times"></i></a>
+                                            <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>
+                                            <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>*@
+
+                                        <a href="/Report/Form/@item.Id" class="edit-row">
+                                            <i class="fa fa-pencil" style="color:black"></i> ویرایش
+                                        </a>
+                                        <a href="/Report/Details/@item.Id" class="on-editing save-row">
+                                            <i class="fa fa-save" style="color:mediumpurple"></i> جزییات
+                                        </a>
+                                        <a href="/Report/UpdateStatus/@item.Id?status=2" class="remove-row hidden"><i class="fa fa-trash-o"></i> حذف </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- end: panel body -->
+
+        </div> <!-- end panel -->
+    </div> <!-- end col-->
+</div>

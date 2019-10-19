@@ -1,0 +1,78 @@
+﻿@model TagroReport.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+
+
+<div class="account-pages"></div>
+<div class="clearfix"></div>
+<div class="wrapper-page">
+    <div class="text-center">
+        <a href="index.html" class="logo"><span>تگرو<span>خبری</span></span></a>
+        <h5 class="text-muted m-t-0 font-600">ورود بخش کاربران و خبرنگاران</h5>
+    </div>
+    <div class="m-t-40 card-box">
+        <div class="text-center">
+            <h4 class="text-uppercase font-bold m-b-0">ثبت نام</h4>
+        </div>
+        <div class="panel-body">
+            <section id="loginForm" class="form-horizontal m-t-20">
+                @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <hr />
+                    @Html.ValidationSummary("", new { @class = "text-danger" })
+                    <div class="form-group">
+                        ایمیل
+                        @*@Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })*@
+                        <div class="col-md-10 col-md-offset-2">
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        رمز عبور
+                        @*@Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })*@
+                        <div class="col-md-10 col-md-offset-2">
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        تکرار رمز عبور
+                        @*@Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })*@
+                        <div class="col-md-10 col-md-offset-2">
+                            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        نقش
+                        @*@Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })*@
+                        <div class="col-md-10 col-md-offset-2">
+                            @Html.DropDownListFor(m => m.RoleName, new SelectList(ViewBag.Roles, "Value", "Text"), new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            @*<input type="submit" class="btn btn-default" value="Register" />*@
+                            <button type="submit" value="Register" class="btn btn-custom btn-bordred btn-block waves-effect waves-light">ثبت نام</button>
+
+                        </div>
+                    </div>
+                }
+
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <p class="text-muted">حساب کاربری دارید؟<a href="login" class="text-primary m-l-5"><b>وارد شوید</b></a></p>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
